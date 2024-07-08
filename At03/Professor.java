@@ -1,12 +1,12 @@
 // Criando a classe publica Professor
-public class Professor{
+public class Professor extends Pessoa{
     // Atributos
-    private String nome;
+
     private long siape;
 
     // Receber nome professor(Construtor)
     public Professor (String nome){
-        this.nome = nome;
+        super(nome);
     }
 
     // AtribuirSIAPE(Metodo)
@@ -19,5 +19,3 @@ public class Professor{
     }
 
 }
-
-
