@@ -1,4 +1,4 @@
-// Criando a classe publica Professor
+// Criando a classe publica Professor 
 public class Professor{
     // Atributos
     private String nome;

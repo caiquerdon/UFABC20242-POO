@@ -3,22 +3,22 @@ import java.util.ArrayList;
 public class Disciplina{
     // Atributos
     private String nome;
-    private Pessoa professor;
-    private ArrayList<Pessoa> alunos;
+    private Professor professor;
+    private ArrayList<Aluno> alunos;
 
 
     public Disciplina (String nome){
         this.nome = nome;
-        alunos = new ArrayList<Pessoa>();
+        alunos = new ArrayList<Aluno>();
         
     }
 
     // (Metodo)
-    public void IncluirProfessor (Pessoa professor){
+    public void IncluirProfessor (Professor professor){
         this.professor = professor;
     }
 
-    public void IncluirAluno (Pessoa aluno) {
+    public void IncluirAluno (Aluno aluno) {
         this.alunos.add(aluno);
     }
 
@@ -31,7 +31,7 @@ public class Disciplina{
             professor.Imprimir(prefixo + "\t\t");
         System.out.printf("%s\tAlunos:\n", prefixo);
         if (alunos.size() > 0) {
-            for (Pessoa a: alunos) {
+            for (Aluno a: alunos) {
                 a.Imprimir(prefixo + "\t\t");
             }
         } else {

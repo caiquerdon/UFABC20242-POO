@@ -1,11 +1,12 @@
 // Criando a classe publica Aluno
-public class Aluno extends Pessoa{
+public class Aluno{
     // Atributos 
+    private String nome;
     private long RA;
 
     // Receber Nome 
     public Aluno (String nome){
-        super(nome);
+        this.nome = nome;
     }
 
     // Atibuir RA
