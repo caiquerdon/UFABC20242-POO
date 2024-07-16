@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import At04.Pessoa;
-
 public class Disciplina{
     // Atributos
     private String nome;
@@ -25,7 +23,7 @@ public class Disciplina{
     }
 
     public void Imprimir(String prefixo) {
-        System.out.printf("%s%s\n", prefixo, nome);
+        System.out.printf("%s%s [%s]\n", prefixo, nome, Curso.gerarCodigoDisciplina(nome));
         System.out.printf("%s\tProfessor:\n", prefixo);
         if (professor == null)
             System.out.printf("%s\t\t-vazio-\n", prefixo);

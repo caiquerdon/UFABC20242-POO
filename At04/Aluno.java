@@ -1,7 +1,4 @@
 // Criando a classe publica Aluno
-
-import At04.Pessoa;
-
 public class Aluno extends Pessoa{
     // Atributos 
     private long RA;
@@ -17,6 +14,6 @@ public class Aluno extends Pessoa{
     }
     
     public void Imprimir(String prefixo) {
-        System.out.printf("%s%s (RA %d)\n", prefixo, nome, RA);
+        System.out.printf("%s%s (RA %d)[%d]\n", prefixo, nome, RA, id);
     }
 }

@@ -1,7 +1,5 @@
 // Criando a classe publica Professor
 
-import At04.Pessoa;
-
 public class Professor extends Pessoa{
     // Atributos
 
@@ -18,7 +16,6 @@ public class Professor extends Pessoa{
     }
 
     public void Imprimir(String prefixo) {
-        System.out.printf("%s%s (SIAPE %d)\n", prefixo, nome, siape);
+        System.out.printf("%s%s (SIAPE %d)[%d]\n", prefixo, nome, siape, id);
     }
-
 }
