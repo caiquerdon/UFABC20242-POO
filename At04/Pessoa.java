@@ -2,13 +2,14 @@
 // A classe vai servir como modelo para outras classes
 public abstract class Pessoa {
 
-    // Atributo protegido(protecd) da classe pessoa
+    // Atributos e Variaveis
     protected String nome;
     private static long id_counter = 0;
     protected long id;
 
     // Construtor que recebe o nome e armazena na variavel nome
     // Como é o construtor da classe, sempre precisa ter o nome da classe
+    // Incrementando o id counter para a cada execucao ele atribuir um id uma pessoa
     public Pessoa(String nome) {
         this.nome = nome;
         id_counter++;
