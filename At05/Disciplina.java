@@ -26,20 +26,25 @@ public class Disciplina{
     }
 
     public void Imprimir(String prefixo) {
-        System.out.printf("%s%s [%s]\n", prefixo, nome, Curso.gerarCodigoDisciplina(nome));
-        System.out.printf("%s\tProfessor:\n", prefixo);
-        if (professor == null)
-            System.out.printf("%s\t\t-vazio-\n", prefixo);
-        else
-            professor.Imprimir(prefixo + "\t\t");
-        System.out.printf("%s\tAlunos:\n", prefixo);
-        if (alunos.size() > 0) {
-            for (Pessoa a: alunos) {
-                a.Imprimir(prefixo + "\t\t");
+        try{
+            System.out.printf("%s%s [%s]\n", prefixo, nome, Curso.gerarCodigoDisciplina(nome));
+            System.out.printf("%s\tProfessor:\n", prefixo);
+            if (professor == null){
+                System.out.printf("%s\t\t-vazio-\n", prefixo);
+            } else {
+                professor.Imprimir(prefixo + "\t\t");
             }
+            System.out.printf("%s\tAlunos:\n", prefixo);
+            if (alunos.size() > 0) {
+                for (Pessoa a: alunos) {
+                    a.Imprimir(prefixo + "\t\t");
+             }
         } else {
             System.out.printf("%s\t\t-vazio-\n", prefixo);
         }
-    }
+        } catch (Exception e) {
+            System.out.println("Ocorreu um erro: "+ e.getMessage());
+        }
+    }   
 
 }

@@ -16,7 +16,6 @@ public class Professor extends Pessoa {
         this.siape = siape;
     }
 
-    @Override
     public void Imprimir(String prefixo) throws Exception {
         if (siape <= 0) {
             throw new Exception("SIAPE <= 0");

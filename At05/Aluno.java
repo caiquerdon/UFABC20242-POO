@@ -15,7 +15,6 @@ public class Aluno extends Pessoa {
         this.RA = RA;
     }
     
-    @Override
     public void Imprimir(String prefixo) throws Exception {
         if (RA <= 0) {
             throw new Exception("RA <= 0");
@@ -23,3 +22,4 @@ public class Aluno extends Pessoa {
         System.out.printf("%s%s (RA %d)[%d]\n", prefixo, nome, RA, id);
     }
 }
+

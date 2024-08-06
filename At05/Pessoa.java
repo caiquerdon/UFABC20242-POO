@@ -23,6 +23,6 @@ public abstract class Pessoa {
 
     // Metodo abstrato imprimir que recebe um Argumento do Tipo string
     // Metodo abstrato é um método que é declarado sem uma implementação.
-    public abstract void Imprimir (String argumento);
+    public abstract void Imprimir (String argumento) throws Exception;
     
 }
