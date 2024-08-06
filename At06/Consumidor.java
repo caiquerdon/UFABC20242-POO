@@ -4,7 +4,7 @@ public class Consumidor {
     // Lista com todas as instâncias de Consumir (cada uma rodando em uma Thread)
     private ArrayList<Consumir> consumidores = new ArrayList<Consumir>();
 
-    // Construtor, jah implementado... nao alterar!
+    // Construtor, já implementado... não alterar!
     Consumidor(String nome, int total_de_itens, int tempo_de_producao, int num_threads) {
         int itens_por_thread = total_de_itens / num_threads;
         int thread_com_1_item_adicional = total_de_itens % num_threads;
@@ -16,9 +16,12 @@ public class Consumidor {
     }
 
     public void consumir() {
-        // IMPLEMENTAR!!!
+
         // Executar (chamar .start()) para cada Thread (classe Consumir)
-    };
+        for (Consumir consumidor : consumidores) {
+            consumidor.start();
+        }
+    }
 
     public class Consumir extends Thread {
         private String nome;
@@ -35,9 +38,11 @@ public class Consumidor {
         public void run() {
             for (int i = 0; i < total_itens; i++) {
 
-                // IMPLEMENTAR!!!
                 // Chamar Fila.instancia().remover(getName());
-                // Nao esquecer de protegar esta regiao critica!
+                // Não esquecer de proteger esta região crítica!
+                synchronized (Fila.instancia()) {
+                    Fila.instancia().remover(getName());
+                }
 
                 // Simulando o tempo de consumo...
                 try {
